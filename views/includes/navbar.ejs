@@ -66,14 +66,15 @@
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+        <!-- <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a> -->
+         <a  href="/listings" class="mt-2"> <img src="/images/logo.png" alt="" style="height: 200px; "></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #f8f9fa;">
             <span class="navbar-toggler-icon" style="filter: invert(0);"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
 
-                <a class="nav-link" href="/listings">Explore </a>
+                <!-- <a style="font-size:x-large; font-weight: 500;" class="nav-link" href="/listings">Apna<span style="color: #ef6c00;">PG</span> </a> -->
 
 
             </div>
@@ -85,14 +86,14 @@
             </div>
 
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/listings/new">Airbnb your home</a>
-                <%if(!currUser){%>
-                    <a class="nav-link " href="/signup"><b>Sign up</b></a>
-                    <a class="nav-link" href="/login"><b>Login</b> </a>
-                    <%}%>
-                        <%if(currUser){%>
-                            <a class="nav-link" href="/logout"> <b>Log out</b></a>
-                            <%}%>
+                <a class="nav-link" href="/listings/new">Add your PG</a>
+           <% if (!currUser) { %>
+    <a class="nav-link " href="/signup"><b>Sign up</b></a>
+    <a class="nav-link" href="/login"><b>Login</b></a>
+<% } else { %>
+    <a class="nav-link" href="/logout"><b>Logout</b></a>
+<% } %>
+
 
             </div>
 
